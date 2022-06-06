@@ -1,7 +1,8 @@
-package com.nttdata.bootcamp.models;
+package com.nttdata.bootcamp.models.products;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,15 +11,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "transaction_enterprises")
+@Document(collection = "currentaccounts")
 @Builder
-public class TransactionEnterprise {
+public class CurrentAccount {
 	@Id
 	private String id;
-	private String idCustomerEnterprise;
-	private String idProduct;
-	private String productName;
-	private String typeTransaction;
-	private String amount;
-	private String createdAt;
+	private String idCustomer;
+	private String typeCustomer;
+	private String accountingBalance;
+	private String maintenance;
+	private String profile;
 }
